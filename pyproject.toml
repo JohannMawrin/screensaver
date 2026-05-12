@@ -8,6 +8,7 @@ dependencies = []
 
 [dependency-groups]
 dev = [
+    "mypy>=2.1.0",
     "ruff>=0.15.12",
 ]
 
@@ -53,3 +54,6 @@ ignore = [
     "ISC003",  # Checks for string literals that are explicitly concatenated (using the + operator).
     "TRY003",  # Checks for long exception messages that are not defined in the exception class itself.
 ]
+
+[tool.mypy]
+strict = true
