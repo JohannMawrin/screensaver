@@ -4,7 +4,10 @@ version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.14"
-dependencies = []
+dependencies = [
+    "blessed>=1.39.0",
+    "fpstimer>=0.0.1",
+]
 
 [dependency-groups]
 dev = [
@@ -57,3 +60,7 @@ ignore = [
 
 [tool.mypy]
 strict = true
+
+[[tool.mypy.overrides]]
+module = "fpstimer.*"
+ignore_missing_imports = true
